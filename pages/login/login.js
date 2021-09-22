@@ -41,6 +41,9 @@ Page({
         duration: 2000
       })
     } else {
+      wx.showLoading({
+        title: '系统正在处理中...',
+      })
       wx.request({
         url: config.routes.getUserId,
         method: 'post',
@@ -55,8 +58,8 @@ Page({
         success: function (res) {
           var openid = res.data.openid
           var name = res.data.user_name
+          wx.hideLoading();
           if (openid) {
-            wx.hideLoading();
             wx.setStorageSync('openid', openid);
             wx.setStorageSync('name', name);
             wx.switchTab({
@@ -71,6 +74,7 @@ Page({
           }
         },
         fail: function () {
+          wx.hideLoading();
           wx.showToast({
             title: '登录失败,请重新登录',
             icon: 'none',

@@ -104,7 +104,7 @@ Page({
       success: function (res) {
         var obj = res.data.results;
         that.setData({
-          state: options.state,
+          state: obj.state,
           cm_inf_cod:  obj.cm_inf_cod,
           cm_inf_bod:  obj.cm_inf_bod,
           cm_inf_nhn:  obj.cm_inf_nhn,
