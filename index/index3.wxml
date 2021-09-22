@@ -1,0 +1,13 @@
+<view class="page" data-weui-theme="{{theme}}">
+	<view class="page__hd user-header">
+		<view class="page__title">{{username}}</view>
+		<view class="page__desc">高效运营</view>
+	</view>
+
+
+	<view class="page__bd">
+		<view class="button-sp-area cell">
+			<a class="weui-btn_cell weui-btn_cell-default" bindtap="logout">退出登录</a>
+		</view>
+	</view>
+</view>

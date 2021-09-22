@@ -1,0 +1,5 @@
+/* pages/day_rpt/day_rpt.wxss */
+.weui-form-preview{margin-bottom:25px}
+.page {
+  background: #ededed;
+}

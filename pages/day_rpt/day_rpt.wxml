@@ -1,0 +1,468 @@
+<view class="page">
+
+  <view class="page__bd">
+
+    <!--进水水质-->
+    <view class="weui-form-preview">
+      <view class="weui-form-preview__hd">
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">进水水质</label>
+          <!-- <em class="weui-form-preview__value">¥2400.00</em> -->
+        </view>
+      </view>
+      <view class="weui-form-preview__bd">
+        <view class="weui-flex">
+          <view class="weui-flex__item">
+            <view class="text-center"></view>
+          </view>
+          <view class="weui-flex__item">
+            <view class="text-center">COD</view>
+          </view>
+          <view class="weui-flex__item">
+            <view class="text-center">NH3-N</view>
+          </view>
+          <view class="weui-flex__item">
+            <view class="text-center">TN</view>
+          </view>
+          <view class="weui-flex__item">
+            <view class="text-center">TP</view>
+          </view>
+        </view>
+        <view class="weui-flex">
+          <view class="weui-flex__item">
+            <view class="text-center">化验</view>
+          </view>
+          <view class="weui-flex__item">
+            <view class="text-center">{{cm_inf_cod}}</view>
+          </view>
+          <view class="weui-flex__item">
+            <view class="text-center">{{cm_inf_nhn}}</view>
+          </view>
+          <view class="weui-flex__item">
+            <view class="text-center">{{cm_inf_tn}}</view>
+          </view>
+          <view class="weui-flex__item">
+            <view class="text-center">{{cm_inf_tp}}</view>
+          </view>
+        </view>
+        <view class="weui-flex">
+          <view class="weui-flex__item">
+            <view class="text-center">在线</view>
+          </view>
+          <view class="weui-flex__item">
+            <view class="text-center">{{on_inf_cod}}</view>
+          </view>
+          <view class="weui-flex__item">
+            <view class="text-center">{{on_inf_nhn}}</view>
+          </view>
+          <view class="weui-flex__item">
+            <view class="text-center">{{on_inf_tn}}</view>
+          </view>
+          <view class="weui-flex__item">
+            <view class="text-center">{{on_inf_tp}}</view>
+          </view>
+        </view>
+        <view class="weui-flex">
+          <view class="weui-flex__item">
+            <view class="text-center"></view>
+          </view>
+          <view class="weui-flex__item">
+            <view class="text-center">BOD</view>
+          </view>
+          <view class="weui-flex__item">
+            <view class="text-center">SS</view>
+          </view>
+          <view class="weui-flex__item">
+            <view class="text-center">PH</view>
+          </view>
+          <view class="weui-flex__item">
+            <view class="text-center"></view>
+          </view>
+        </view>
+        <view class="weui-flex">
+          <view class="weui-flex__item">
+            <view class="text-center">化验</view>
+          </view>
+          <view class="weui-flex__item">
+            <view class="text-center">{{cm_inf_bod}}</view>
+          </view>
+          <view class="weui-flex__item">
+            <view class="text-center">{{cm_inf_ss}}</view>
+          </view>
+          <view class="weui-flex__item">
+            <view class="text-center">{{cm_inf_ph}}</view>
+          </view>
+          <view class="weui-flex__item">
+            <view class="text-center"></view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <!--出水水质-->
+    <view class="weui-form-preview">
+      <view class="weui-form-preview__hd">
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">进水水质</label>
+          <!-- <em class="weui-form-preview__value">¥2400.00</em> -->
+        </view>
+      </view>
+      <view class="weui-form-preview__bd">
+        <view class="weui-flex">
+          <view class="weui-flex__item">
+            <view class="text-center"></view>
+          </view>
+          <view class="weui-flex__item">
+            <view class="text-center">COD</view>
+          </view>
+          <view class="weui-flex__item">
+            <view class="text-center">NH3-N</view>
+          </view>
+          <view class="weui-flex__item">
+            <view class="text-center">TN</view>
+          </view>
+          <view class="weui-flex__item">
+            <view class="text-center">TP</view>
+          </view>
+        </view>
+        <view class="weui-flex">
+          <view class="weui-flex__item">
+            <view class="text-center">化验</view>
+          </view>
+          <view class="weui-flex__item">
+            <view class="text-center">{{cm_eff_cod}}</view>
+          </view>
+          <view class="weui-flex__item">
+            <view class="text-center">{{cm_eff_nhn}}</view>
+          </view>
+          <view class="weui-flex__item">
+            <view class="text-center">{{cm_eff_tn}}</view>
+          </view>
+          <view class="weui-flex__item">
+            <view class="text-center">{{cm_eff_tp}}</view>
+          </view>
+        </view>
+        <view class="weui-flex">
+          <view class="weui-flex__item">
+            <view class="text-center">在线</view>
+          </view>
+          <view class="weui-flex__item">
+            <view class="text-center">{{on_eff_cod}}</view>
+          </view>
+          <view class="weui-flex__item">
+            <view class="text-center">{{on_eff_nhn}}</view>
+          </view>
+          <view class="weui-flex__item">
+            <view class="text-center">{{on_eff_tn}}</view>
+          </view>
+          <view class="weui-flex__item">
+            <view class="text-center">{{on_eff_tp}}</view>
+          </view>
+        </view>
+        <view class="weui-flex">
+          <view class="weui-flex__item">
+            <view class="text-center"></view>
+          </view>
+          <view class="weui-flex__item">
+            <view class="text-center">BOD</view>
+          </view>
+          <view class="weui-flex__item">
+            <view class="text-center">SS</view>
+          </view>
+          <view class="weui-flex__item">
+            <view class="text-center">PH</view>
+          </view>
+          <view class="weui-flex__item">
+            <view class="text-center"></view>
+          </view>
+        </view>
+        <view class="weui-flex">
+          <view class="weui-flex__item">
+            <view class="text-center">化验</view>
+          </view>
+          <view class="weui-flex__item">
+            <view class="text-center">{{cm_eff_bod}}</view>
+          </view>
+          <view class="weui-flex__item">
+            <view class="text-center">{{cm_eff_ss}}</view>
+          </view>
+          <view class="weui-flex__item">
+            <view class="text-center">{{cm_eff_ph}}</view>
+          </view>
+          <view class="weui-flex__item">
+            <view class="text-center"></view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <!--二沉池出水-->
+    <view class="weui-form-preview">
+      <view class="weui-form-preview__hd">
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">二沉池出水</label>
+          <!-- <em class="weui-form-preview__value">¥2400.00</em> -->
+        </view>
+      </view>
+      <view class="weui-form-preview__bd">
+        <view class="weui-flex">
+          <view class="weui-flex__item">
+            <view class="text-center">COD</view>
+          </view>
+          <view class="weui-flex__item">
+            <view class="text-center">BOD</view>
+          </view>
+          <view class="weui-flex__item">
+            <view class="text-center">NH3-N</view>
+          </view>
+          <view class="weui-flex__item">
+            <view class="text-center">TN</view>
+          </view>
+        </view>
+        <view class="weui-flex">
+          <view class="weui-flex__item">
+            <view class="text-center">{{cm_sed_cod}}</view>
+          </view>
+          <view class="weui-flex__item">
+            <view class="text-center">1{{cm_sed_bod}}</view>
+          </view>
+          <view class="weui-flex__item">
+            <view class="text-center">{{cm_sed_nhn}}</view>
+          </view>
+          <view class="weui-flex__item">
+            <view class="text-center">{{cm_sed_tn}}</view>
+          </view>
+        </view>
+        <view class="weui-flex">
+          <view class="weui-flex__item">
+            <view class="text-center">SS</view>
+          </view>
+          <view class="weui-flex__item">
+            <view class="text-center">PH</view>
+          </view>
+          <view class="weui-flex__item">
+            <view class="text-center"></view>
+          </view>
+          <view class="weui-flex__item">
+            <view class="text-center"></view>
+          </view>
+        </view>
+        <view class="weui-flex">
+          <view class="weui-flex__item">
+            <view class="text-center">{{cm_sed_ss}}</view>
+          </view>
+          <view class="weui-flex__item">
+            <view class="text-center">{{cm_sed_ph}}</view>
+          </view>
+          <view class="weui-flex__item">
+            <view class="text-center"></view>
+          </view>
+          <view class="weui-flex__item">
+            <view class="text-center"></view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <!--处理水量-->
+    <view class="weui-form-preview">
+      <view class="weui-form-preview__hd">
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">处理水量</label>
+        </view>
+      </view>
+      <view class="weui-form-preview__bd">
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">进水量(吨)</label>
+          <text class="weui-form-preview__value">{{inflow}}</text>
+        </view>
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">出水量(吨)</label>
+          <text class="weui-form-preview__value">{{outflow}}</text>
+        </view>
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">耗电量(度)</label>
+          <text class="weui-form-preview__value">{{power}}</text>
+        </view>
+      </view>
+    </view>
+
+    <!--污泥量-->
+    <view class="weui-form-preview">
+      <view class="weui-form-preview__hd">
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">污泥量</label>
+        </view>
+      </view>
+      <view class="weui-form-preview__bd">
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">进泥量(吨)</label>
+          <text class="weui-form-preview__value">{{inmud}}</text>
+        </view>
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">出泥量(吨)</label>
+          <text class="weui-form-preview__value">{{outmud}}</text>
+        </view>
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">污泥含水率(%)</label>
+          <text class="weui-form-preview__value">{{mst}}</text>
+        </view>
+      </view>
+    </view>
+
+    <!--中水量-->
+    <view class="weui-form-preview">
+      <view class="weui-form-preview__hd">
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">中水量</label>
+        </view>
+      </view>
+      <view class="weui-form-preview__bd">
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">中水量(吨)</label>
+          <text class="weui-form-preview__value">{{md}}</text>
+        </view>
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">中水回用量(吨)</label>
+          <text class="weui-form-preview__value">{{mdrcy}}</text>
+        </view>
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">中水销售水量(吨)</label>
+          <text class="weui-form-preview__value">{{mdsell}}</text>
+        </view>
+      </view>
+    </view>
+
+    <!--药剂-->
+    <view class="weui-form-preview">
+      <view class="weui-form-preview__hd">
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">药剂</label>
+          <!-- <em class="weui-form-preview__value">¥2400.00</em> -->
+        </view>
+      </view>
+      <view class="weui-form-preview__bd">
+        <view class="weui-flex">
+          <view class="weui-flex__item">
+            <view class="text-center"></view>
+          </view>
+          <view class="weui-flex__item">
+            <view class="text-center">单价(元/吨)</view>
+          </view>
+          <view class="weui-flex__item">
+            <view class="text-center">药剂浓度(%)</view>
+          </view>
+          <view class="weui-flex__item">
+            <view class="text-center">投加量(吨)</view>
+          </view>
+        </view>
+        <block wx:for="{{chemicals}}">
+          <view class="weui-flex">
+            <view class="weui-flex__item">
+              <view class="text-center">{{item.name}}</view>
+            </view>
+            <view class="weui-flex__item">
+              <view class="text-center">{{item.unprice}}</view>
+            </view>
+            <view class="weui-flex__item">
+              <view class="text-center">{{item.cmptc}}</view>
+            </view>
+            <view class="weui-flex__item">
+              <view class="text-center">{{item.dosage}}</view>
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>
+
+    <!--污泥处置-->
+    <view class="weui-form-preview">
+      <view class="weui-form-preview__hd">
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">污泥处置</label>
+        </view>
+      </view>
+      <block wx:for="{{tspmuds}}">
+        <view class="weui-form-preview__bd">
+          <view class="weui-flex">
+            {{item.name}}
+          </view>
+          <view class="weui-flex">
+            <view class="weui-flex__item">
+              <view class="text-center">转运量</view>
+            </view>
+            <view class="weui-flex__item">
+              <view class="text-center">接收量</view>
+            </view>
+            <view class="weui-flex__item">
+              <view class="text-center">价格(元/吨)</view>
+            </view>
+            <view class="weui-flex__item">
+              <view class="text-center">处置</view>
+            </view>
+          </view>
+          <view class="weui-flex">
+            <view class="weui-flex__item">
+              <view class="text-center">{{item.tspvum}}</view>
+            </view>
+            <view class="weui-flex__item">
+              <view class="text-center">{{item.rcpvum}}</view>
+            </view>
+            <view class="weui-flex__item">
+              <view class="text-center">{{item.price}}</view>
+            </view>
+            <view class="weui-flex__item">
+              <view class="text-center">{{item.prtmtd}}</view>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+
+    <!--备注-->
+    <view class="weui-form-preview">
+      <view class="weui-form-preview__hd">
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">备注</label>
+          <!-- <em class="weui-form-preview__value">¥2400.00</em> -->
+        </view>
+      </view>
+      <view class="weui-form-preview__bd">
+        <view class="weui-flex">
+          {{desc}}
+        </view>
+      </view>
+    </view>
+
+    <view class="weui-form-preview">
+      <view class="weui-form-preview__hd">
+        <block wx:if="{{state == '0'}}">
+          <view class="text-primary">填报中</view>
+        </block>
+        <block wx:if="{{state == '1'}}">
+          <block wx:if="{{jd == 0}}">
+            <a class="weui-btn weui-btn_primary" bindtap="cmpVerifying">提交公司审核</a>
+            <a class="weui-btn weui-btn_warn" bindtap="rejected">驳 回</a>
+          </block>
+          <view class="text-primary" wx:else>
+            审核员审核中
+          </view>
+        </block>
+        <view class="text-danger" wx:elif="{{state == '2'}}">审核员驳回</view>
+        <block wx:elif="{{state == '3'}}">
+          <block wx:if="{{jd == 1}}">
+            <a class="weui-btn weui-btn_primary" bindtap="upreport" >上报水务集团</a>
+            <a class="weui-btn weui-btn_warn" bindtap="rejected">驳 回</a>
+          </block>
+          <view class="text-info" wx:else>
+            公司审核中
+          </view>
+        </block>
+        <view class="text-danger" wx:elif="{{state == '4'}}">公司驳回</view>
+        <view class="text-success" wx:elif="{{state == '5'}}">
+          已上报水务集团
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

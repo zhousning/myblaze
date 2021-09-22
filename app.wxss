@@ -1,0 +1,47 @@
+@import "weui.wxss";
+@import './libs/image-base64.wxss';
+
+page {
+  height: 100%;
+}
+.container{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  font-family:"Microsoft YaHei";
+}
+.page-ctn{
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.transparent-btn {
+  width: 350rpx;
+  height: 120rpx;
+  color: white;
+  background: transparent;
+  border: 1rpx solid white;
+  text-align: center;
+  box-shadow: 0 0 20px #eee;
+  font-size: 45rpx;
+  font-weight: lighter;
+}
+.text-center {
+  text-align: center;
+}
+.text-primary {
+  color: #1B9AF7 !important;
+}
+.text-info {
+  color: #17a2b8 !important;
+}
+.text-success {
+  color: #A5DE37 !important;
+}
+.text-danger {
+  color: #ff4351 !important;
+}
+
+
