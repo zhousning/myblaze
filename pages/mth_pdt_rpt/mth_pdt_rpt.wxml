@@ -1,0 +1,481 @@
+<view class="page">
+
+  <view class="page__bd">
+
+    <!--处理水量-->
+    <view class="weui-form-preview">
+      <view class="weui-form-preview__hd">
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">处理水量</label>
+        </view>
+      </view>
+      <view class="weui-form-preview__bd">
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">本月污水处理量(吨/日)</label>
+          <text class="weui-form-preview__value">{{outflow}}</text>
+        </view>
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">平均污水处理量(吨/日)</label>
+          <text class="weui-form-preview__value">{{avg_outflow}}</text>
+        </view>
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">本月止累计污水处理量(吨)</label>
+          <text class="weui-form-preview__value">{{end_outflow}}</text>
+        </view>
+      </view>
+    </view>
+
+    <!--进出水水质-->
+    <view class="weui-form-preview">
+      <view class="weui-form-preview__hd">
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">COD</label>
+        </view>
+      </view>
+      <view class="weui-form-preview__bd">
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">平均进水浓度(mg/L)</label>
+          <text class="weui-form-preview__value">{{inf.cod}}</text>
+        </view>
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">平均出水浓度(mg/L)</label>
+          <text class="weui-form-preview__value">{{eff.cod}}</text>
+        </view>
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">平均削减率(%)</label>
+          <text class="weui-form-preview__value">{{emr.cod}}</text>
+        </view>
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">平均削减量(mg/L)</label>
+          <text class="weui-form-preview__value">{{avg_emq.cod}}</text>
+        </view>
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">本月削减量(吨)</label>
+          <text class="weui-form-preview__value">{{emq.cod}}</text>
+        </view>
+
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">本月止累计削减量(吨)</label>
+          <text class="weui-form-preview__value">{{end_emq.cod}}</text>
+        </view>
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">削减量同比(%)</label>
+          <text class="weui-form-preview__value">{{yoy.cod}}</text>
+        </view>
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">削减量环比(%)</label>
+          <text class="weui-form-preview__value">{{mom.cod}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="weui-form-preview">
+      <view class="weui-form-preview__hd">
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">BOD</label>
+        </view>
+      </view>
+      <view class="weui-form-preview__bd">
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">平均进水浓度(mg/L)</label>
+          <text class="weui-form-preview__value">{{inf.bod}}</text>
+        </view>
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">平均出水浓度(mg/L)</label>
+          <text class="weui-form-preview__value">{{eff.bod}}</text>
+        </view>
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">平均削减率(%)</label>
+          <text class="weui-form-preview__value">{{emr.bod}}</text>
+        </view>
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">平均削减量(mg/L)</label>
+          <text class="weui-form-preview__value">{{avg_emq.bod}}</text>
+        </view>
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">本月削减量(吨)</label>
+          <text class="weui-form-preview__value">{{emq.bod}}</text>
+        </view>
+
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">本月止累计削减量(吨)</label>
+          <text class="weui-form-preview__value">{{end_emq.bod}}</text>
+        </view>
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">削减量同比(%)</label>
+          <text class="weui-form-preview__value">{{yoy.bod}}</text>
+        </view>
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">削减量环比(%)</label>
+          <text class="weui-form-preview__value">{{mom.bod}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="weui-form-preview">
+      <view class="weui-form-preview__hd">
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">NH3-N</label>
+        </view>
+      </view>
+      <view class="weui-form-preview__bd">
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">平均进水浓度(mg/L)</label>
+          <text class="weui-form-preview__value">{{inf.nhn}}</text>
+        </view>
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">平均出水浓度(mg/L)</label>
+          <text class="weui-form-preview__value">{{eff.nhn}}</text>
+        </view>
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">平均削减率(%)</label>
+          <text class="weui-form-preview__value">{{emr.nhn}}</text>
+        </view>
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">平均削减量(mg/L)</label>
+          <text class="weui-form-preview__value">{{avg_emq.nhn}}</text>
+        </view>
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">本月削减量(吨)</label>
+          <text class="weui-form-preview__value">{{emq.nhn}}</text>
+        </view>
+
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">本月止累计削减量(吨)</label>
+          <text class="weui-form-preview__value">{{end_emq.nhn}}</text>
+        </view>
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">削减量同比(%)</label>
+          <text class="weui-form-preview__value">{{yoy.nhn}}</text>
+        </view>
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">削减量环比(%)</label>
+          <text class="weui-form-preview__value">{{mom.nhn}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="weui-form-preview">
+      <view class="weui-form-preview__hd">
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">TN</label>
+        </view>
+      </view>
+      <view class="weui-form-preview__bd">
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">平均进水浓度(mg/L)</label>
+          <text class="weui-form-preview__value">{{inf.tn}}</text>
+        </view>
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">平均出水浓度(mg/L)</label>
+          <text class="weui-form-preview__value">{{eff.tn}}</text>
+        </view>
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">平均削减率(%)</label>
+          <text class="weui-form-preview__value">{{emr.tn}}</text>
+        </view>
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">平均削减量(mg/L)</label>
+          <text class="weui-form-preview__value">{{avg_emq.tn}}</text>
+        </view>
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">本月削减量(吨)</label>
+          <text class="weui-form-preview__value">{{emq.tn}}</text>
+        </view>
+
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">本月止累计削减量(吨)</label>
+          <text class="weui-form-preview__value">{{end_emq.tn}}</text>
+        </view>
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">削减量同比(%)</label>
+          <text class="weui-form-preview__value">{{yoy.tn}}</text>
+        </view>
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">削减量环比(%)</label>
+          <text class="weui-form-preview__value">{{mom.tn}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="weui-form-preview">
+      <view class="weui-form-preview__hd">
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">TP</label>
+        </view>
+      </view>
+      <view class="weui-form-preview__bd">
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">平均进水浓度(mg/L)</label>
+          <text class="weui-form-preview__value">{{inf.tp}}</text>
+        </view>
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">平均出水浓度(mg/L)</label>
+          <text class="weui-form-preview__value">{{eff.tp}}</text>
+        </view>
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">平均削减率(%)</label>
+          <text class="weui-form-preview__value">{{emr.tp}}</text>
+        </view>
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">平均削减量(mg/L)</label>
+          <text class="weui-form-preview__value">{{avg_emq.tp}}</text>
+        </view>
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">本月削减量(吨)</label>
+          <text class="weui-form-preview__value">{{emq.tp}}</text>
+        </view>
+
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">本月止累计削减量(吨)</label>
+          <text class="weui-form-preview__value">{{end_emq.tp}}</text>
+        </view>
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">削减量同比(%)</label>
+          <text class="weui-form-preview__value">{{yoy.tp}}</text>
+        </view>
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">削减量环比(%)</label>
+          <text class="weui-form-preview__value">{{mom.tp}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="weui-form-preview">
+      <view class="weui-form-preview__hd">
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">SS</label>
+        </view>
+      </view>
+      <view class="weui-form-preview__bd">
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">平均进水浓度(mg/L)</label>
+          <text class="weui-form-preview__value">{{inf.ss}}</text>
+        </view>
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">平均出水浓度(mg/L)</label>
+          <text class="weui-form-preview__value">{{eff.ss}}</text>
+        </view>
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">平均削减率(%)</label>
+          <text class="weui-form-preview__value">{{emr.ss}}</text>
+        </view>
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">平均削减量(mg/L)</label>
+          <text class="weui-form-preview__value">{{avg_emq.ss}}</text>
+        </view>
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">本月削减量(吨)</label>
+          <text class="weui-form-preview__value">{{emq.ss}}</text>
+        </view>
+
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">本月止累计削减量(吨)</label>
+          <text class="weui-form-preview__value">{{end_emq.ss}}</text>
+        </view>
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">削减量同比(%)</label>
+          <text class="weui-form-preview__value">{{yoy.ss}}</text>
+        </view>
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">削减量环比(%)</label>
+          <text class="weui-form-preview__value">{{mom.ss}}</text>
+        </view>
+      </view>
+    </view>
+
+    <!--药剂-->
+    <view class="weui-form-preview">
+      <view class="weui-form-preview__hd">
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">药剂</label>
+        </view>
+      </view>
+      <block wx:for="{{chemicals}}">
+        <view class="weui-form-preview__bd">
+          <view class="weui-flex">
+            {{item.name}}
+          </view>
+
+          <view class="weui-form-preview__item">
+            <label class="weui-form-preview__label">单价(元/吨)</label>
+            <text class="weui-form-preview__value">{{item.unprice}}</text>
+          </view>
+          <view class="weui-form-preview__item">
+            <label class="weui-form-preview__label">药剂浓度(%)</label>
+            <text class="weui-form-preview__value">{{item.cmptc}}</text>
+          </view>
+          <view class="weui-form-preview__item">
+            <label class="weui-form-preview__label">累计投加量(吨)</label>
+            <text class="weui-form-preview__value">{{item.dosage}}</text>
+          </view>
+          <view class="weui-form-preview__item">
+            <label class="weui-form-preview__label">修正累计投加量(吨)</label>
+            <text class="weui-form-preview__value">{{item.act_dos}}</text>
+          </view>
+          <view class="weui-form-preview__item">
+            <label class="weui-form-preview__label">平均每日投加量(吨/天)</label>
+            <text class="weui-form-preview__value">{{item.avg_dos}}</text>
+          </view>
+          <view class="weui-form-preview__item">
+            <label class="weui-form-preview__label">药剂投加浓度(mg/L)</label>
+            <text class="weui-form-preview__value">{{item.dosptc}}</text>
+          </view>
+          <view class="weui-form-preview__item">
+            <label class="weui-form-preview__label">吨水药剂成本(元/千吨)</label>
+            <text class="weui-form-preview__value">{{item.per_cost}}</text>
+          </view>
+        </view>
+      </block>
+    </view>
+
+    <!--电耗-->
+    <view class="weui-form-preview">
+      <view class="weui-form-preview__hd">
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">耗电量</label>
+        </view>
+      </view>
+      <view class="weui-form-preview__bd">
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">本月总耗电量(度)</label>
+          <text class="weui-form-preview__value">{{power.power}}</text>
+        </view>
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">本月止累计耗电量(度)</label>
+          <text class="weui-form-preview__value">{{power.end_power}}</text>
+        </view>
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">单耗(kw.hm3)</label>
+          <text class="weui-form-preview__value">{{power.bom}}</text>
+        </view>
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">耗电总量(万千瓦时)-同比(%)</label>
+          <text class="weui-form-preview__value">{{power.yoy_power}}</text>
+        </view>
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">耗电总量(万千瓦时)-环比(%)</label>
+          <text class="weui-form-preview__value">{{power.mom_power}}</text>
+        </view>
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">单耗(千瓦时/吨)-同比(%)</label>
+          <text class="weui-form-preview__value">{{power.yoy_bom}}</text>
+        </view>
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">单耗(千瓦时/吨)-环比(%)</label>
+          <text class="weui-form-preview__value">{{power.mom_bom}}</text>
+        </view>
+      </view>
+    </view>
+
+    <!--污泥量-->
+    <view class="weui-form-preview">
+      <view class="weui-form-preview__hd">
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">污泥处理</label>
+        </view>
+      </view>
+      <view class="weui-form-preview__bd">
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">进泥量(吨)</label>
+          <text class="weui-form-preview__value">{{mud.inmud}}</text>
+        </view>
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">本月止累计进泥量(吨)</label>
+          <text class="weui-form-preview__value">{{mud.end_inmud}}</text>
+        </view>
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">出泥量(吨)</label>
+          <text class="weui-form-preview__value">{{mud.outmud}}</text>
+        </view>
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">本月止累计出泥量(吨)</label>
+          <text class="weui-form-preview__value">{{mud.end_outmud}}</text>
+        </view>
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">同比(%)</label>
+          <text class="weui-form-preview__value">{{mud.yoy}}</text>
+        </view>
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">环比(%)</label>
+          <text class="weui-form-preview__value">{{mud.mom}}</text>
+        </view>
+      </view>
+    </view>
+
+    <!--中水量-->
+    <view class="weui-form-preview">
+      <view class="weui-form-preview__hd">
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">中水量</label>
+        </view>
+      </view>
+      <view class="weui-form-preview__bd">
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">中水回用量(吨)</label>
+          <text class="weui-form-preview__value">{{md.mdrcy}}</text>
+        </view>
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">本月止累计中水回用量(吨)</label>
+          <text class="weui-form-preview__value">{{md.end_mdrcy}}</text>
+        </view>
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">中水销售水量(吨)</label>
+          <text class="weui-form-preview__value">{{md.mdsell}}</text>
+        </view>
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">本月止累计中水销售水量(吨)</label>
+          <text class="weui-form-preview__value">{{md.end_mdsell}}</text>
+        </view>
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">中水回用量(吨)-同比(%)</label>
+          <text class="weui-form-preview__value">{{md.yoy_mdrcy}}</text>
+        </view>
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">中水回用量(吨)-环比(%)</label>
+          <text class="weui-form-preview__value">{{md.mom_mdrcy}}</text>
+        </view>
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">中水销售水量(吨)-同比(%)</label>
+          <text class="weui-form-preview__value">{{md.yoy_mdsell}}</text>
+        </view>
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">中水销售水量(吨)-环比(%)</label>
+          <text class="weui-form-preview__value">{{md.mom_mdsell}}</text>
+        </view>
+
+
+
+      </view>
+    </view>
+
+
+
+
+    <view class="weui-form-preview">
+      <view class="weui-form-preview__hd">
+        <block wx:if="{{state == '0'}}">
+          <view class="text-primary">填报中</view>
+        </block>
+        <block wx:if="{{state == '1'}}">
+          <block wx:if="{{jd == 0}}">
+            <a class="weui-btn weui-btn_primary" bindtap="cmpVerifying">提交公司审核</a>
+            <a class="weui-btn weui-btn_warn" bindtap="rejected">驳 回</a>
+          </block>
+          <view class="text-primary" wx:else>
+            审核员审核中
+          </view>
+        </block>
+        <view class="text-danger" wx:elif="{{state == '2'}}">审核员驳回</view>
+        <block wx:elif="{{state == '3'}}">
+          <block wx:if="{{jd == 1}}">
+            <a class="weui-btn weui-btn_primary" bindtap="upreport">上报水务集团</a>
+            <a class="weui-btn weui-btn_warn" bindtap="rejected">驳 回</a>
+          </block>
+          <view class="text-info" wx:else>
+            公司审核中
+          </view>
+        </block>
+        <view class="text-danger" wx:elif="{{state == '4'}}">公司驳回</view>
+        <view class="text-success" wx:elif="{{state == '5'}}">
+          已上报水务集团
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

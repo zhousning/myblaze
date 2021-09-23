@@ -4,8 +4,10 @@
 //http://192.168.100.114:3000
 var configs = {
   routes: {
-    host: 'https://lszls.net:9191',
-    getUserId: 'https://lszls.net:9191/wx_users/get_userid'
+    //host: 'https://lszls.net:9191',
+    //getUserId: 'https://lszls.net:9191/wx_users/get_userid'
+    host: 'http://192.168.100.114:3000',
+    getUserId: 'http://192.168.100.114:3000/wx_users/get_userid'
   },
   games: {
     rankScore: 10,

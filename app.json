@@ -4,7 +4,8 @@
         "index/index2",
         "index/index3",
         "pages/login/login",
-        "pages/day_rpt/day_rpt"
+        "pages/day_rpt/day_rpt",
+        "pages/mth_pdt_rpt/mth_pdt_rpt"
     ],
     "tabBar": {
         "custom": true,
@@ -30,7 +31,7 @@
                 "iconPath": "images/user.png",
                 "selectedIconPath": "images/user_HL.png",
                 "text": "我的"
-              }
+            }
         ]
     },
     "window": {
