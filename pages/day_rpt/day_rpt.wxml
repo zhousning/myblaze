@@ -103,7 +103,7 @@
     <view class="weui-form-preview">
       <view class="weui-form-preview__hd">
         <view class="weui-form-preview__item">
-          <label class="weui-form-preview__label">进水水质</label>
+          <label class="weui-form-preview__label">出水水质</label>
           <!-- <em class="weui-form-preview__value">¥2400.00</em> -->
         </view>
       </view>
@@ -224,7 +224,7 @@
             <view class="text-center">{{cm_sed_cod}}</view>
           </view>
           <view class="weui-flex__item">
-            <view class="text-center">1{{cm_sed_bod}}</view>
+            <view class="text-center">{{cm_sed_bod}}</view>
           </view>
           <view class="weui-flex__item">
             <view class="text-center">{{cm_sed_nhn}}</view>
@@ -296,7 +296,7 @@
       </view>
       <view class="weui-form-preview__bd">
         <view class="weui-form-preview__item">
-          <label class="weui-form-preview__label">进泥量(吨)</label>
+          <label class="weui-form-preview__label">进泥量(m3)</label>
           <text class="weui-form-preview__value">{{inmud}}</text>
         </view>
         <view class="weui-form-preview__item">

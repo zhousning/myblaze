@@ -372,11 +372,11 @@
       </view>
       <view class="weui-form-preview__bd">
         <view class="weui-form-preview__item">
-          <label class="weui-form-preview__label">进泥量(吨)</label>
+          <label class="weui-form-preview__label">进泥量(m3)</label>
           <text class="weui-form-preview__value">{{mud.inmud}}</text>
         </view>
         <view class="weui-form-preview__item">
-          <label class="weui-form-preview__label">本月止累计进泥量(吨)</label>
+          <label class="weui-form-preview__label">本月止累计进泥量(m3)</label>
           <text class="weui-form-preview__value">{{mud.end_inmud}}</text>
         </view>
         <view class="weui-form-preview__item">
@@ -443,9 +443,6 @@
 
       </view>
     </view>
-
-
-
 
     <view class="weui-form-preview">
       <view class="weui-form-preview__hd">

@@ -1,4 +1,5 @@
 const config = require('../libs/config.js')
+const app = getApp();
 
 Component({
   data: {
@@ -10,13 +11,18 @@ Component({
       wx.showLoading({
         title: '数据加载中',
       })
-      var openid = wx.getStorageSync('openid');
-      var url = config.routes.host + '/mth_pdt_rpts/verify_index';
-      if (!openid) {
+      var user = wx.getStorageSync('user');
+      if (!user) {
         wx.redirectTo({
           url: '../pages/login/login'
         })
         return;
+      }
+      var url = '';
+      if (app.globalData.fct_role.indexOf(user.jd) != -1) {
+        url = config.routes.host + '/mth_pdt_rpts/verify_index';
+      } else if (app.globalData.fct_role.indexOf(user.jd) != -1 || app.globalData.grp_role.indexOf(user.jd) != -1) {
+        url = config.routes.host + '/mth_pdt_rpts';
       }
       var that = this;
       wx.request({
@@ -26,14 +32,14 @@ Component({
           'content-type': 'application/json' // 默认值
         },
         data: {
-          openid: openid
+          openid: user.openid
         },
         success: function (res) {
           var objs = res.data.results;
           var mth_pdt_rpts = [];
           for (var i = 0; i < objs.length; i++) {
             mth_pdt_rpts.push({
-              url: '/pages/mth_pdt_rpt/mth_pdt_rpt?fct=' + objs[i].fct + '&mth_pdt_rpt=' + objs[i].mth_pdt_rpt + '&state=' + objs[i].state + '&jd=' + objs[i].jd,
+              url: '/pages/mth_pdt_rpt/mth_pdt_rpt?fct=' + objs[i].fct + '&mth_pdt_rpt=' + objs[i].mth_pdt_rpt + '&jd=' + user.jd,
               factory: objs[i].name,
               state: objs[i].state
             })

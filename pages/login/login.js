@@ -42,7 +42,7 @@ Page({
       })
     } else {
       wx.showLoading({
-        title: '系统正在处理中...',
+        title: '正在登录...',
       })
       wx.request({
         url: config.routes.getUserId,
@@ -58,10 +58,15 @@ Page({
         success: function (res) {
           var openid = res.data.openid
           var name = res.data.user_name
+          var jd = res.data.jd
           wx.hideLoading();
           if (openid) {
-            wx.setStorageSync('openid', openid);
-            wx.setStorageSync('name', name);
+            var user = {
+              openid: openid,
+              name: name,
+              jd: jd
+            }
+            wx.setStorageSync('user', user);
             wx.switchTab({
               url: '/index/index'
             })

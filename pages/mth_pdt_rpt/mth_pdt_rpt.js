@@ -52,10 +52,10 @@ Page({
    */
   onShow: function () {
     var that = this;
-    var openid = wx.getStorageSync('openid');
-    var fct = this.data.fct;
-    var mth_pdt_rpt = this.data.mth_pdt_rpt;
-    //var url =  config.routes.host + 'factories/' + fct + '/mth_pdt_rpts/' + mth_pdt_rpt + '/cmp_verifying';
+    var user = wx.getStorageSync('user');
+    var openid = user.openid;
+    var fct = that.data.fct;
+    var mth_pdt_rpt = that.data.mth_pdt_rpt;
     var url =  config.routes.host + '/factories/' + fct + '/mth_pdt_rpts/' + mth_pdt_rpt + '/verify_show';
     
     wx.showLoading({
@@ -100,9 +100,10 @@ Page({
   
   cmpVerifying: function () {
     var that = this;
-    var openid = wx.getStorageSync('openid');
-    var fct = this.data.fct;
-    var mth_pdt_rpt = this.data.mth_pdt_rpt;
+    var user = wx.getStorageSync('user');
+    var openid = user.openid;
+    var fct = that.data.fct;
+    var mth_pdt_rpt = that.data.mth_pdt_rpt;
     var url =  config.routes.host + '/factories/' + fct + '/mth_pdt_rpts/' + mth_pdt_rpt + '/cmp_verifying';
     
     wx.showModal({
@@ -147,9 +148,10 @@ Page({
 
   upreport: function () {
     var that = this;
-    var openid = wx.getStorageSync('openid');
-    var fct = this.data.fct;
-    var mth_pdt_rpt = this.data.mth_pdt_rpt;
+    var user = wx.getStorageSync('user');
+    var openid = user.openid;
+    var fct = that.data.fct;
+    var mth_pdt_rpt = that.data.mth_pdt_rpt;
     var url =  config.routes.host + '/factories/' + fct + '/mth_pdt_rpts/' + mth_pdt_rpt + '/upreport';
  
     wx.showModal({
@@ -194,9 +196,10 @@ Page({
 
   rejected: function () {
     var that = this;
-    var openid = wx.getStorageSync('openid');
-    var fct = this.data.fct;
-    var mth_pdt_rpt = this.data.mth_pdt_rpt;
+    var user = wx.getStorageSync('user');
+    var openid = user.openid;
+    var fct = that.data.fct;
+    var mth_pdt_rpt = that.data.mth_pdt_rpt;
     var url =  config.routes.host + '/factories/' + fct + '/mth_pdt_rpts/' + mth_pdt_rpt + '/rejected';
     
     wx.showModal({

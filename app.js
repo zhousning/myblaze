@@ -4,7 +4,9 @@ const config = require('./libs/config.js')
 App({
   onLaunch: function () {},
   globalData: {
-    userInfo: null
+    fct_role: [0, 1, 2],
+    fct_leader_role: [3],
+    grp_role: [4]
   },
   createShareMessage: function () {
     var message = {

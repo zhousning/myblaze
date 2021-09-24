@@ -1,5 +1,6 @@
 // pages/day_rpt/day_rpt.js
 const config = require('../../libs/config.js')
+const app = getApp();
 
 Page({
 
@@ -83,12 +84,17 @@ Page({
    */
   onShow: function () {
     var that = this;
-    var openid = wx.getStorageSync('openid');
-    var fct = this.data.fct;
-    var day_pdt = this.data.day_pdt;
-    //var url =  config.routes.host + 'factories/' + fct + '/day_pdts/' + day_pdt + '/cmp_verifying';
-    var url =  config.routes.host + '/factories/' + fct + '/day_pdts/' + day_pdt + '/verify_show';
-    
+    var user = wx.getStorageSync('user');
+    var openid = user.openid;
+    var fct = that.data.fct;
+    var day_pdt = that.data.day_pdt;
+    var url = '';
+    if (app.globalData.fct_role.indexOf(user.jd) != -1) {
+      url = config.routes.host + '/factories/' + fct + '/day_pdts/' + day_pdt + '/verify_show';
+    } else if (app.globalData.fct_role.indexOf(user.jd) != -1 || app.globalData.grp_role.indexOf(user.jd) != -1) {
+      url = config.routes.host + '/factories/' + fct + '/day_pdt_rpts/' + day_pdt
+    }
+
     wx.showLoading({
       title: '数据加载中',
     })
@@ -157,9 +163,10 @@ Page({
   
   cmpVerifying: function () {
     var that = this;
-    var openid = wx.getStorageSync('openid');
-    var fct = this.data.fct;
-    var day_pdt = this.data.day_pdt;
+    var user = wx.getStorageSync('user');
+    var openid = user.openid;
+    var fct = that.data.fct;
+    var day_pdt = that.data.day_pdt;
     var url =  config.routes.host + '/factories/' + fct + '/day_pdts/' + day_pdt + '/cmp_verifying';
     
     wx.showModal({
@@ -204,9 +211,10 @@ Page({
 
   upreport: function () {
     var that = this;
-    var openid = wx.getStorageSync('openid');
-    var fct = this.data.fct;
-    var day_pdt = this.data.day_pdt;
+    var user = wx.getStorageSync('user');
+    var openid = user.openid;
+    var fct = that.data.fct;
+    var day_pdt = that.data.day_pdt;
     var url =  config.routes.host + '/factories/' + fct + '/day_pdts/' + day_pdt + '/upreport';
  
     wx.showModal({
@@ -251,9 +259,10 @@ Page({
 
   rejected: function () {
     var that = this;
-    var openid = wx.getStorageSync('openid');
-    var fct = this.data.fct;
-    var day_pdt = this.data.day_pdt;
+    var user = wx.getStorageSync('user');
+    var openid = user.openid;
+    var fct = that.data.fct;
+    var day_pdt = that.data.day_pdt;
     var url =  config.routes.host + '/factories/' + fct + '/day_pdts/' + day_pdt + '/rejected';
     
     wx.showModal({
