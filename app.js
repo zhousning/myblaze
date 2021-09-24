@@ -2,7 +2,9 @@ const appUtils = require('./libs/app-utils.js')
 const config = require('./libs/config.js')
 
 App({
-  onLaunch: function () {},
+  onLaunch: function () {
+
+  },
   globalData: {
     fct_role: [0, 1, 2],
     fct_leader_role: [3],
